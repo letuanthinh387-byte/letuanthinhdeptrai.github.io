@@ -8,7 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(180deg, #ffdee9);
+      background: linear-gradient(180deg, #ffdee9, #b5fffc);
       overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
       color: #d63384;
@@ -35,31 +35,17 @@
     }
 
     .special {
-      font-size: 64px;
+      font-size: 72px;
       font-weight: bold;
       color: #ff1493;
       text-shadow: 0 0 25px #fff, 0 0 40px #ff69b4;
-      margin-top: 50px;
+      margin-top: 60px;
       animation: pulse 2s infinite alternate;
     }
 
     @keyframes pulse {
       from { transform: scale(1); }
       to { transform: scale(1.1); }
-    }
-
-    .flower {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 120px;
-      opacity: 0;
-      animation: bloom 3s ease-in-out 33s forwards;
-    }
-
-    @keyframes bloom {
-      0% { transform: scale(0.5); opacity: 0; bottom: 20px; right: 20px; }
-      100% { transform: scale(1.8); opacity: 1; bottom: 50%; right: 50%; transform: translate(50%, 50%) scale(2); }
     }
 
     .credit {
@@ -70,7 +56,7 @@
       color: #555;
     }
 
-    /* PHÁO HOA */
+    
     canvas {
       position: fixed;
       top: 0;
@@ -79,9 +65,12 @@
       z-index: 999;
     }
   </style>
+
+  <link rel="stylesheet" href="flower.css">
 </head>
-<body>
-  <h1> Chúc cô và các bạn 20/10 vui vẻ </h1>
+
+<body class="not-loaded">
+  <h1>Chúc cô và các bạn:</h1>
 
   <div class="names">
     <p>Nguyễn Thị Yến Nhi</p>
@@ -100,11 +89,9 @@
     <p>Ka Hồng</p>
     <p>Đỗ Ka Quỳnh Anh</p>
     <p>Phạm Ngọc Thúy An</p>
-    <div class="special"> Phạm Huyền Linh </div>
-    <p>câu chúc bla bla....</p>
+    <div class="special">Phạm Huyền Linh</div>
+    <p>Chúc mọi người luôn xinh đẹp, hạnh phúc và rạng rỡ nhé!</p>
   </div>
-
-  <img class="flower" src="https://cdn.pixabay.com/photo/2016/03/31/20/39/bouquet-1296112_1280.png" alt="bouquet">
 
   <div class="credit">Cre: letuanthinhdeptrai</div>
 
@@ -193,5 +180,8 @@
       animate();
     }, 33000);
   </script>
+  <div class="night"></div>
+  <div class="flowers"></div>
+  <script src="flower.js"></script>
 </body>
 </html>
